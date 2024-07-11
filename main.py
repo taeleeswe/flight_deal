@@ -1,10 +1,13 @@
-#This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
-
-import requests
+import time
 from data_manager import DataManager
+from flight_search import FlightSearch
 from pprint import pprint
+
+
 data_manager = DataManager()
 sheet_data = data_manager.get_destination_data()
+flight_search = FlightSearch()
+
 
 
 if sheet_data[0]["iataCode"] == "":
